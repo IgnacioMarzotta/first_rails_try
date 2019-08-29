@@ -12,22 +12,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-light border-info mb-3">
-      <a class="navbar-brand" href="one">ONE</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="two">Two <span class="sr-only">(current)</span></a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="three">Three</a>
+            <%= link_to 'One', pages_one_path, class:"nav-item nav-link"%>
+            <%= link_to 'Two', pages_two_path, class:"nav-item nav-link"%>
+            <%= link_to 'Three', pages_three_path, class:"nav-item nav-link"%>
           </li>
         </ul>
       </div>
     </nav>
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>
